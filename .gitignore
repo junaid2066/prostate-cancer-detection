@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and outputs
+data/*
+!data/README.md
+outputs/*
+!outputs/.gitkeep
+models/*
+!models/.gitkeep
+
+# Kaggle / local artifacts
+kaggle.json
+*.pth
+*.pt
+*.h5
+*.ckpt
+*.npy
+*.npz
+*.csv
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+
+# OS
+.DS_Store
+Thumbs.db
