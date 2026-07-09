@@ -1,0 +1,31 @@
+dataset:
+  root_dir: /kaggle/input/prostate-cancer-pi-cai-dataset
+  metadata_file: /kaggle/input/prostate-cancer-pi-cai-dataset/Metadata with lesion info.csv
+  output_dir: /kaggle/working/prostate_processed
+
+preprocessing:
+  num_slices: 16
+  image_size: 224
+  modality_keywords:
+    - t2w
+    - adc
+    - hbv
+
+training:
+  seed: 42
+  batch_size: 16
+  epochs: 10
+  learning_rate: 0.00003
+  weight_decay: 0.0001
+  num_workers: 2
+  test_size: 0.15
+  validation_size: 0.15
+
+models:
+  swin_name: swin_base_patch4_window7_224
+  vit_name: vit_base_patch16_224
+  num_classes: 2
+
+outputs:
+  model_dir: models
+  result_dir: outputs
